@@ -2,7 +2,7 @@
 library(EpiEstim); library(ggplot2); library(here)
 
 # Loading incidence data and estimating Rt using default weekly sliding windows
-covid_case_incidence <- readRDS(here("CADDE_Workshop_R_Estimation/UK_covid_incidence.rds")) # load COVID-19 incidence
+covid_case_incidence <- readRDS("UK_covid_incidence.rds") # load COVID-19 incidence
 output_weekly <- estimate_R(incid = covid_case_incidence,       # incidence dataframe
                             method = "parametric_si",          
                             config = make_config(list(
